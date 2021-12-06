@@ -1,16 +1,28 @@
 #Python Sounds Project
 from playsound import playsound
-import time
+import sounddevice
+from scipy.io.wavfile import write
 
-mp3 = 'Spongebob_E_Minor.mp3'
+def recording():  # Citation: https://www.youtube.com/watch?v=HT5w-HNcr5A
+
+    fps = 44100
+    duration = int(input("How many seconds would you like to record?"))
+
+    print("Recording in progress...")
+    recording = sounddevice.rec(int(duration*fps), samplerate=fps, channels=1)
+    sounddevice.wait()
+    print("Recording Done!")
+
+    #create file
+    filename = input("Create a filename!")
+    audiofile = filename + ".wav"
+    write(audiofile, fps, recording)
+    return audiofile
+
+wav = recording()
 
 def play():
-    playsound(mp3)
+    playsound(wav)
 
-def delay():
-    play()
-    time.sleep(2)
-    play()
-
-delay()
-
+def loop():
+    while
