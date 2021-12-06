@@ -1,6 +1,8 @@
 # Python Final Project
 
-Name: Calvin Ton
+Name: Calvin Ton 
+Year: Junior
+
 
 Project title: Python Recorder and Looper
 
