@@ -45,10 +45,10 @@ def main(): #allows user to easily use different functions within the program
     validKeys = ["p", "P", "q", "Q", "l", "L","r","R"]
     valid = True
     while valid:
-        inp = input("Enter l or L to loop, enter p or P to play, and enter q or Q to quit,")
+        inp = input("Enter l/L to loop, p/P to play, r/R to make a new recording, and q/Q to quit")
         while inp not in validKeys:
             print("Entered invalid key")
-            inp = input("Enter l/L to loop, p/P to play, r/R to amke a new recording, and q/Q to quit")
+            inp = input("Enter l/L to loop, p/P to play, r/R to make a new recording, and q/Q to quit")
         if inp == "l" or inp == "L":
             loop(wav)
         elif inp == "P" or inp == "p":
