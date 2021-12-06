@@ -8,7 +8,7 @@ print("Using this program you can record your voice or any sound through a micro
 print("First enter how many seconds you would like to record, and there will be further instructions teaching you how to loop and playback the audio")
 
 
-def recording():  # Citation: https://www.youtube.com/watch?v=HT5w-HNcr5A
+def recording():  # Citation: https://www.youtube.com/watch?v=HT5w-HNcr5A #funtion that records audio
     global audiofile
     fps = 44100
     duration = int(input("How many seconds would you like to record?"))
@@ -29,16 +29,16 @@ wav = audiofile
 
 
 
-def play(wav):
+def play(wav): #function to play audio back once
     playsound(wav)
 
 
-def loop(wav):
+def loop(wav): #funtion to play audio back multiple times as a loop
     numOfLoops = int(input("How many times do you want to loop?"))
     for loops in range(numOfLoops):
         play(wav)
 
-def main():
+def main(): #allows user to easily use different functions within the program
 
     wav = recording()
 
