@@ -1,9 +1,16 @@
 #Python Sounds Project
+from playsound import playsound
+import time
 
-# Input an existing mp3 filename
-mp3File = input("Enter a mp3 filename: ")
-# Play the mp3 file
-playsound(mp3File)
+mp3 = 'Spongebob_E_Minor.mp3'
 
+def play():
+    playsound(mp3)
 
+def delay():
+    play()
+    time.sleep(2)
+    play()
+
+delay()
 
