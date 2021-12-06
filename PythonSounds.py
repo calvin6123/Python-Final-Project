@@ -56,7 +56,7 @@ def main(): #allows user to easily use different functions within the program
         elif inp == "r" or inp == "R":
             wav = recording()
         elif inp == "Q" or inp == "q":
-            print("Thanks for using audio my python audio recorder and looper, see ya!")
+            print("Thanks for using my python audio recorder and looper, see ya!")
             valid = False
 main()
 
